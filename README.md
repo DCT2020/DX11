@@ -53,9 +53,11 @@
             ifstream을 통한 raw파일 데이터 읽기
             g_VtxCnt에 데이터 갯수 저장, g_pHeight에 높이 정보를 위한 메모리할당 및 높이 정보 읽어오기
             g_Width, g_Length를 구함.(현재 raw파일의 이미지는 정사각형 형태라 가정[g_Width == g_Length]
+            
       - CreateVertex()
             g_VtxCnt만큼 버텍스 데이터 생성
             pivot을 중심으로 하기위해 halfWidth와 halfLength사용
+            
       - CreateIndex()
             메모리사용 절감을 위해 Index list를 만듦
             인덱스 개수는 (Width * 2) * (Length -1) + (Length - 2)
@@ -69,7 +71,9 @@
             
       - TerrainUpdate(float dTime)
             빈 함수 선언
+            
       - TerrainDraw(float dTime)
             빈 함수 선언
+            
       - TerrainRelease()
             동적할당 및 Create된 함수 Release 및 delete
